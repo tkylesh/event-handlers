@@ -3,9 +3,9 @@
 	<title>Guinea Pig</title>
 	<link rel="stylesheet" type="text/css" href="events.css">
 </head>
-<body>
+<body onclick="target(event)">
 <header id="page-header">
-    <h1 id="page-title">Page title</h1>
+    <h1 id="page-title" onmouseover="h1Hover()" onmouseleave="h1Leave()">Page title</h1>
   </header>
 
   <ul>
@@ -17,21 +17,21 @@
   <article>
     <section class="article-section">Introduction</section>
     <section class="article-section">Body</section>
-    <section class="article-section">Section 1</section>
+    <section class="article-section"><b>Section 1</b></section>
     <section class="article-section">Section 2</section>
     <section class="article-section">Section 3</section>
-    <section class="article-section">Conclusion</section>
+    <section class="article-section"><i><b>Conclusion</b></i></section>
   </article>
 
-  <input type="text" id="keypress-input">
+  <input type="text" id="keypress-input" onkeyup="keyUp()">
 
   <div id="output-target"></div>
 
   <div id="guinea-pig">Leave me alone</div>
-  <button id="add-color">Add color</button>
-  <button id="make-large">Hulkify</button>
-  <button id="add-border">Capture it</button>
-  <button id="add-rounding">Rounded</button>
+  <button id="add-color" onclick="colorChange()">Add color</button>
+  <button id="make-large" onclick="fontsizeChange()">Hulkify</button>
+  <button id="add-border" onclick="addBorder()">Capture it</button>
+  <button id="add-rounding" onclick="roundIt()">Rounded</button>
 
 <script type="text/javascript" src="events.js"></script>
 </body>
